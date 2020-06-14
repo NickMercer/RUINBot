@@ -1,0 +1,17 @@
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.exe
+C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.csprojAssemblyReference.cache
+C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.AssemblyInfoInputs.cache
+C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.AssemblyInfo.cs
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.dll
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.csproj.CopyComplete
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.CommandsNext.dll
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.deps.json
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.runtimeconfig.json
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.runtimeconfig.dev.json
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.dll
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.pdb
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.Interactivity.dll
+C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.dll
+C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.pdb
+C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\Imgur.API.dll
