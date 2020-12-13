@@ -15,3 +15,22 @@ C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.I
 C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.dll
 C:\Users\dekor\source\repos\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.pdb
 C:\Users\dekor\source\repos\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\Imgur.API.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.exe
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.deps.json
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.runtimeconfig.json
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.runtimeconfig.dev.json
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\RUINBot.pdb
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.CommandsNext.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\DSharpPlus.Interactivity.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\Imgur.API.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.csprojAssemblyReference.cache
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.AssemblyInfoInputs.cache
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.AssemblyInfo.cs
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.csproj.CoreCompileInputs.cache
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.csproj.CopyComplete
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.pdb
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot\obj\Debug\netcoreapp3.1\RUINBot.genruntimeconfig.cache

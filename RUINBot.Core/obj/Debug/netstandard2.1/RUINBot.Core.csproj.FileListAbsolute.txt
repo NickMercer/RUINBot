@@ -1,0 +1,10 @@
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\bin\Debug\netstandard2.1\config.json
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\bin\Debug\netstandard2.1\RUINBot.Core.deps.json
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\bin\Debug\netstandard2.1\RUINBot.Core.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\bin\Debug\netstandard2.1\RUINBot.Core.pdb
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\obj\Debug\netstandard2.1\RUINBot.Core.csprojAssemblyReference.cache
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\obj\Debug\netstandard2.1\RUINBot.Core.AssemblyInfoInputs.cache
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\obj\Debug\netstandard2.1\RUINBot.Core.AssemblyInfo.cs
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\obj\Debug\netstandard2.1\RUINBot.Core.csproj.CoreCompileInputs.cache
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\obj\Debug\netstandard2.1\RUINBot.Core.dll
+C:\Users\Dekori\Documents\C# Projects\RUINBot\RUINBot.Core\obj\Debug\netstandard2.1\RUINBot.Core.pdb
