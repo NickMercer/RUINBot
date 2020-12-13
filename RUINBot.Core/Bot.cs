@@ -10,6 +10,7 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.Entities;
 using RUINBot.Core.Commands;
+using RUINBot.Core;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Net.WebSocket;
 using DSharpPlus.Interactivity.Enums;
