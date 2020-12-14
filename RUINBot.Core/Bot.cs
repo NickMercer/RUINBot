@@ -124,6 +124,7 @@ namespace RUINBot.Core
             Commands.RegisterCommands<BasicCommands>();
             Commands.RegisterCommands<AdminCommands>();
             Commands.RegisterCommands<InteractivityCommands>();
+            Commands.RegisterCommands<APICommands>();
         }
 
         private CommandsNextConfiguration CreateCommandsConfig(BotConfig botConfig)

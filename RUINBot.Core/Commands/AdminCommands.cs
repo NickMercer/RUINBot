@@ -8,10 +8,6 @@ using System.Threading.Tasks;
 
 namespace RUINBot.Core.Commands
 {
-    [Group("admin")]
-    [Description("Administrative commands")]
-    [Hidden]
-    [RequirePermissions(DSharpPlus.Permissions.Administrator)]
     public class AdminCommands : BaseCommandModule
     {
         [Command("sudo")]
@@ -29,6 +25,7 @@ namespace RUINBot.Core.Commands
 
             await commands.ExecuteCommandAsync(fakeContext);
         }
+
 
         [Command("nick")]
         [Description("Gives someone a new nickname.")]
@@ -55,6 +52,19 @@ namespace RUINBot.Core.Commands
 
                 await context.RespondAsync($"I made a boo boo :( {emoji}");
             }
+        }
+
+        [Command("wipechat")]
+        [Description("Wipes the chat history")]
+        [Hidden]
+        [RequirePermissions(DSharpPlus.Permissions.Administrator)]
+        public async Task WipeChat(CommandContext context, int messageLimit = 1)
+        {
+            var messageList = await context.Channel.GetMessagesAsync(messageLimit);
+
+            await context.Channel.DeleteMessagesAsync(messageList);
+
+            await context.Channel.SendMessageAsync($"Channel Wiped: { messageList.Count} messages cleaned.");
         }
     }
 }

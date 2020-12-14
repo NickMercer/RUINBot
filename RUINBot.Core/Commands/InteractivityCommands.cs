@@ -2,6 +2,7 @@
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
+using RUINBot.Core.DiscordExtensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,6 +78,45 @@ namespace RUINBot.Core.Commands
             else
             {
                 await context.RespondAsync($"Umm {context.User}, didn't you want a quote?");
+            }
+        }
+
+        [Command("pressf")]
+        [Description("Can I get an F in the chat?")]
+        [Aliases("payrespects", "respecc")]
+        public async Task PressF(CommandContext context)
+        {
+            var initialMessage = await context.Channel.SendMessageAsync("Can I get an F in the chat?");
+
+            var interactivity = context.Client.GetInteractivity();
+
+            var members = await context.Guild.GetAllMembersAsync();
+            var onlineMembers = members.Where(x => x.Presence.IsOnline() && x.IsBot == false).ToList();
+
+            //TODO: Figure out how to gather messages and then respond.
+
+            await context.TriggerTypingAsync();
+
+            var nonRespondingMembers = new List<DiscordMember>(); // This should be replaced by everyone who did not respond with F or f.
+            
+            if(nonRespondingMembers.Count == 0)
+            {
+                await context.Channel.SendFileAsync("pack://application:,,,/RUINBot.Core;component/Images/PressF.jpg", "I protecc, I rekk, but mostly, I press F to pay respecc.");
+            }
+            else
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var member in nonRespondingMembers)
+                {
+                    sb.Append($"{member.Username}, ");
+                }
+
+                sb.Remove(sb.Length - 2, 2);
+
+                string shameList = sb.ToString();
+
+                await context.Channel.SendMessageAsync($"Wow, {shameList}. Do you even respecc?");
             }
         }
     }

@@ -37,5 +37,32 @@ namespace RUINBot.Core.Commands
 
             await context.RespondAsync($"{emoji} Hello, {member.Mention}!");
         }
+
+        [Command("disappointedmarci")]
+        [Description("Sighs at Jon's life decisions")]
+        public async Task DisappointedMarci(CommandContext context)
+        {
+            await context.Channel.SendMessageAsync("*Sigh* Jooonnnn");
+        }
+
+        [Command("overwatch")]
+        [Description("How long does it take to matchmake?")]
+        public async Task Overwatch(CommandContext context)
+        {
+            await context.Channel.SendMessageAsync("What is this, Overwatch?");
+        }
+
+        [Command("random")]
+        [Description("Returns a random number between two values")]
+        public async Task Random(CommandContext context, [Description("Minimum Number")] int min, [Description("Maximum Number")] int max)
+        {
+            await context.TriggerTypingAsync();
+
+            var rnd = new Random();
+
+            var dieEmoji = DiscordEmoji.FromName(context.Client, ":game_die:");
+
+            await context.RespondAsync($"{dieEmoji} Your random number is: {rnd.Next(min, max)}");
+        }
     }
 }
