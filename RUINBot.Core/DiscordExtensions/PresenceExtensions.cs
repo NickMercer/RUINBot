@@ -10,6 +10,8 @@ namespace RUINBot.Core.DiscordExtensions
         public static bool IsOnline(this DiscordPresence presence)
         {
             var isOnline = false;
+            if (presence == null) return isOnline;
+
             if(presence.ClientStatus != null)
             {
                 var desktop = presence.ClientStatus.Desktop;

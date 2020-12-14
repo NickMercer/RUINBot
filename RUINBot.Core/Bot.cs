@@ -29,6 +29,7 @@ namespace RUINBot.Core
         public async Task RunBotAsync()
         {
             BotConfig botConfig = await InitializeClient();
+            GlobalConfig.ImgurId = botConfig.ImgurId;
 
             InitializeInteractivity();
             InitializeCommands(botConfig);

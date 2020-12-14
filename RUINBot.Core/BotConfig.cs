@@ -11,5 +11,7 @@ namespace RUINBot.Core
         public string Token { get; private set; }
         [JsonProperty("prefix")]
         public string CommandPrefix { get; private set; }
+        [JsonProperty("imgurid")]
+        public string ImgurId { get; private set; }
     }
 }
