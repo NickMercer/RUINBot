@@ -16,6 +16,7 @@ namespace RUINBot.Core.Commands
     {
         [Command("poll")]
         [Description("Run a poll with reactions.")]
+        [Hidden]
         public async Task Poll(CommandContext context, [Description("How long should the poll last?")] TimeSpan duration, [Description("What emoji options should people have?")] params DiscordEmoji[] options)
         {
             var interactivity = context.Client.GetInteractivity();
@@ -113,7 +114,7 @@ namespace RUINBot.Core.Commands
             //Respond.
             if(nonRespondingMembers.Count == 0)
             {
-                var filePath = Path.Combine(Environment.CurrentDirectory, @"Images\PressF.jpg");
+                var filePath = Path.Combine(Environment.CurrentDirectory, $"Images{Path.DirectorySeparatorChar}PressF.jpg");
                 await context.Channel.SendFileAsync(filePath, "I protecc, I rekk, but mostly, I press F to pay respecc.");
             }
             else

@@ -62,7 +62,7 @@ namespace RUINBot.Core
         private static async Task<string> ReadConfigFile()
         {
             var json = "";
-            using (var fileStream = File.OpenRead("config.json"))
+            using (var fileStream = File.OpenRead(Path.Combine(Directory.GetCurrentDirectory(), "config.json")))
             using (var streamReader = new StreamReader(fileStream, new UTF8Encoding(false)))
             {
                 json = await streamReader.ReadToEndAsync();

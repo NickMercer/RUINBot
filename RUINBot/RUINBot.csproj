@@ -6,10 +6,59 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\coffee.jpeg" />
+    <None Remove="Images\csimiami.png" />
+    <None Remove="Images\Dinkleberg.jpg" />
+    <None Remove="Images\Disappointed.gif" />
+    <None Remove="Images\PressF.jpg" />
+    <None Remove="Images\shiadoit.gif" />
+    <None Remove="Images\shiaflex.gif" />
+    <None Remove="Images\siegememe.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\coffee.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\csimiami.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Dinkleberg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Disappointed.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PressF.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shiadoit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\shiaflex.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\siegememe.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DSharpPlus" Version="3.2.3" />
     <PackageReference Include="DSharpPlus.CommandsNext" Version="3.2.3" />
     <PackageReference Include="DSharpPlus.Interactivity" Version="3.2.3" />
     <PackageReference Include="Imgur.API" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\coffee.jpeg" />
+    <Resource Include="Images\csimiami.png" />
+    <Resource Include="Images\Dinkleberg.jpg" />
+    <Resource Include="Images\Disappointed.gif" />
+    <Resource Include="Images\PressF.jpg" />
+    <Resource Include="Images\shiadoit.gif" />
+    <Resource Include="Images\shiaflex.gif" />
+    <Resource Include="Images\siegememe.JPG" />
   </ItemGroup>
 
 </Project>
