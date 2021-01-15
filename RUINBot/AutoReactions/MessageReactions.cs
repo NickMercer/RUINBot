@@ -44,7 +44,9 @@ namespace RUINBot.AutoReactions
                     "Marseno",
                     "Arsenial",
                     "Marcino Alvrz",
-                    "Mrcn lvrz"
+                    "Mrcn lvrz",
+                    "Arsenic",
+                    "Arsenic James Alvarararez"
                 };
 
                 var rnd = new Random();

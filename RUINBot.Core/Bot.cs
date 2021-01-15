@@ -34,7 +34,7 @@ namespace RUINBot.Core
             InitializeInteractivity();
             InitializeCommands(botConfig);
 
-            await Client.ConnectAsync();
+            await Client.ConnectAsync();            
             await Task.Delay(-1);
         }
 
@@ -100,6 +100,8 @@ namespace RUINBot.Core
         {
             sender.Logger.LogInformation(BotEventId, $"Guild available: {e.Guild.Name}");
 
+            Client.SendMessageAsync(e.Guild.GetDefaultChannel(), "Good mooooooooorning Hooomans!");
+
             return Task.CompletedTask;
         }
 
@@ -126,6 +128,7 @@ namespace RUINBot.Core
             Commands.RegisterCommands<AdminCommands>();
             Commands.RegisterCommands<InteractivityCommands>();
             Commands.RegisterCommands<APICommands>();
+            Commands.RegisterCommands<ImageCommands>();
         }
 
         private CommandsNextConfiguration CreateCommandsConfig(BotConfig botConfig)
