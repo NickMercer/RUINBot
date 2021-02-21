@@ -10,11 +10,10 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.Entities;
 using RUINBot.Core.Commands;
-using RUINBot.Core;
 using DSharpPlus.Interactivity;
-using DSharpPlus.Net.WebSocket;
 using DSharpPlus.Interactivity.Enums;
 using DSharpPlus.Interactivity.Extensions;
+using RUINBot.Core.AutoReactions;
 
 namespace RUINBot.Core
 {
@@ -28,11 +27,12 @@ namespace RUINBot.Core
 
         public async Task RunBotAsync()
         {
-            BotConfig botConfig = await InitializeClient();
-            GlobalConfig.ImgurId = botConfig.ImgurId;
+            GlobalConfig.BotConfig = await InitializeClient();
+            GlobalConfig.ImgurId = GlobalConfig.BotConfig.ImgurId;
 
             InitializeInteractivity();
-            InitializeCommands(botConfig);
+            InitializeCommands(GlobalConfig.BotConfig);
+            InitializeReactions();
 
             await Client.ConnectAsync();            
             await Task.Delay(-1);
@@ -84,6 +84,9 @@ namespace RUINBot.Core
 
             return discordConfig;
         }
+
+
+
 
         #endregion
 
@@ -184,6 +187,28 @@ namespace RUINBot.Core
             };
 
             Client.UseInteractivity(interactivityConfig);
+        }
+
+        #endregion
+
+        #region Auto Reactions
+
+        private void InitializeReactions()
+        {
+            Client.MessageCreated += OnMessageCreated;
+            Client.PresenceUpdated += OnPresenceUpdated;
+        }
+
+        private Task OnMessageCreated(DiscordClient sender, MessageCreateEventArgs e)
+        {
+            MessageReactions.ReactToMessages(e);
+            return Task.CompletedTask;
+        }
+
+        private Task OnPresenceUpdated(DiscordClient sender, PresenceUpdateEventArgs e)
+        {
+            PresenceReactions.ReactToPresenceChanges(e);
+            return Task.CompletedTask;
         }
 
         #endregion
