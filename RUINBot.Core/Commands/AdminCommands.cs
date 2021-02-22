@@ -30,7 +30,8 @@ namespace RUINBot.Core.Commands
         }
 
 
-        [Command("nick")]
+        [Command("nickname")]
+        [Hidden]
         [Description("Gives someone a new nickname.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageNicknames)]
         public async Task ChangeNickname(CommandContext context, [Description("Member to change the nickname for.")] DiscordMember member, [RemainingText, Description("The nickname to give to that user")] string newNickname)

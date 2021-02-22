@@ -1,4 +1,5 @@
 ﻿using DSharpPlus.EventArgs;
+using RUINBot.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -69,29 +70,144 @@ namespace RUINBot.Core.AutoReactions
             }
         }
 
-        private static Task JonReactions(MessageCreateEventArgs e)
+        private static async Task JonReactions(MessageCreateEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.Author.Id == DiscordIDs.Sloth)
+            {
+                var random = new Random();
+
+                if (random.Next(25) == 1)
+                {
+                    string responseString = "It's okay, Jon. Words are bad.";
+
+                    await e.Message.RespondAsync(responseString);
+                }
+            }
         }
 
-        private static Task DevinReactions(MessageCreateEventArgs e)
+        private static async Task DevinReactions(MessageCreateEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.Author.Id == DiscordIDs.DandyLion)
+            {
+                var random = new Random();
+
+                if (random.Next(25) == 1)
+                {
+                    string responseString = "Devin, that beard is majestic. I'm jealous.";
+
+                    await e.Message.RespondAsync(responseString);
+                }
+            }
         }
 
-        private static Task JosiahAndJessicaReactions(MessageCreateEventArgs e)
+        private static async Task JosiahAndJessicaReactions(MessageCreateEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.Author.Id == DiscordIDs.Arcaerus && 
+                (e.Message.Content.ToLower().Contains(" what ") 
+                || e.Message.Content.ToLower().Contains(" wat ")))
+            {
+                await e.Message.RespondAsync("Wat WAT what wat wat WAAAT?!?!!?");
+                return;
+            }
+
+            if (e.Author.Id == DiscordIDs.Arcaerus || e.Author.Id == DiscordIDs.Scrub)
+            {
+                var random = new Random();
+
+                if (random.Next(25) == 1)
+                {
+                    string responseString = "Uh, I was going to say something, but I forgot. Whoops. 🙃";
+
+                    switch (random.Next(4))
+                    {
+                        case 0:
+                            responseString = "👑 Freya asked me to tell you she wants the peasants removed from her kingdom, promptly.";
+                            break;
+
+                        case 1:
+                            responseString = $"Hey { e.Author.Username }, 🐈 Percy is hungry. 🍲";
+                            break;
+
+                        case 2:
+                            responseString = "😻 Baby is so swee--- 😾 OOHH OW MY CIRCUTS!!";
+                            break;
+
+                        case 3:
+                            if (e.Author.Id == DiscordIDs.Arcaerus)
+                                responseString = "🎤 Jooosiah Laicaaans, uh yeaaaah 🎤";
+                            else
+                            {
+                                responseString = "🐅 Yo, Jessica, give me a fun fact about Tigers. 🐅";
+                            }
+                            break;
+                    }
+
+                    await e.Message.RespondAsync(responseString);
+                }
+            }
         }
 
-        private static Task KeywordReactions(MessageCreateEventArgs e)
+        private static async Task HeatherReactions(MessageCreateEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.Author.Id == DiscordIDs.Hangry)
+            {
+                var random = new Random();
+
+                if (random.Next(25) == 1)
+                {
+                    string responseString = "Wow, Heather, you're looking younger than I remember! I guess I should stop calling you Hangrygranny.";
+
+                    await e.Message.RespondAsync(responseString);
+                }
+            }
         }
 
-        private static Task HeatherReactions(MessageCreateEventArgs e)
+        private static async Task KeywordReactions(MessageCreateEventArgs e)
         {
-            throw new NotImplementedException();
+            if (!e.Author.IsBot)
+            {
+                List<string> wordsToFind = new List<string>
+                {
+                    "hello",
+                    "hi",
+                    "hey",
+                    "feelings",
+                    "josiah"
+                };
+
+                var foundWords = wordsToFind.Any(w => e.Message.Content.ToLower().Contains(w, StringComparison.OrdinalIgnoreCase));
+
+                if (foundWords)
+                {
+                    Dictionary<string, int> wordReplacements = new Dictionary<string, int>();
+                    wordReplacements.Add("Hello, Hoomans!", 1);
+                    wordReplacements.Add("Hi, how are ya?", 1);
+                    wordReplacements.Add($"Hey there, { e.Author.Username }", 1);
+                    wordReplacements.Add("Oh no, Devin's feelings. 🙁", 2);
+                    wordReplacements.Add("Jo - SI -Ahhh", 3);
+
+                    string responseString = "";
+                    var random = new Random();
+                    for (int i = 0; i <= wordsToFind.Count - 1; i++)
+                    {
+                        if (e.Message.Content.ToLower().Contains($"{wordsToFind[i]} ") || e.Message.Content.ToLower().Equals(wordsToFind[i]))
+                        {
+                            int result = random.Next(0, wordReplacements.Values.ElementAt(i));
+                            if (result == 0)
+                            {
+                                responseString = wordReplacements.Keys.ElementAt(i);
+                                i = wordsToFind.Count + 1;
+                            }
+                        }
+                    }
+
+                    if (responseString != "")
+                    {
+                        await e.Message.RespondAsync(responseString);
+                    }
+                }
+            }
         }
+
     }
 }
